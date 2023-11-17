@@ -54,25 +54,25 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-    },
-    borderRadius: {
-      lg: "var(--radius)",
-      md: "calc(var(--radius) - 2px)",
-      sm: "calc(var(--radius) - 4px)",
-    },
-    keyframes: {
-      "accordian-down": {
-        from: { height: "0" },
-        to: { height: "var(--radix-accordion-content-height)" },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
-      "accordian-up": {
-        from: { height: "var(--radix-accordion-content-height)" },
-        to: { height: "0" },
+      keyframes: {
+        "accordian-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordian-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
       },
-    },
-    animation: {
-      "accordion-up": "accordian-up 0.2s ease-out",
-      "accordion-down": "accordian-down 0.2s ease-out",
+      animation: {
+        "accordion-up": "accordian-up 0.2s ease-out",
+        "accordion-down": "accordian-down 0.2s ease-out",
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
