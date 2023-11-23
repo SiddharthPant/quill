@@ -41,6 +41,9 @@ dependencies:
   '@trpc/server':
     specifier: ^10.43.6
     version: 10.43.6
+  '@uploadthing/react':
+    specifier: ^6.0.2
+    version: 6.0.2(next@14.0.3)(react@18.2.0)(uploadthing@6.0.3)
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -962,6 +965,27 @@ packages:
 
   /@uploadthing/mime-types@0.2.2:
     resolution: {integrity: sha512-ZUo1JHOPPMZDsUw1mOhhVDIvJGlsjj6T0xJ/YJtulyJwL43S9B5pxg1cHcRuTEgjaxj7B55jiqQ6r9mDrrjH9A==}
+    dev: false
+
+  /@uploadthing/react@6.0.2(next@14.0.3)(react@18.2.0)(uploadthing@6.0.3):
+    resolution: {integrity: sha512-gUJwNvSFs0bg4m0c6wlFo1Fe3uyGTmAp0BESkRZvqyN4hNhIcxMY0TxjqxCKsYkv1T0/y3dHgN/XU2BDAQQh7w==}
+    peerDependencies:
+      next: '*'
+      react: ^17.0.2 || ^18.0.0
+      uploadthing: ^6.0.0
+    peerDependenciesMeta:
+      next:
+        optional: true
+    dependencies:
+      '@uploadthing/shared': 6.0.2(@uploadthing/mime-types@0.2.2)
+      attr-accept: 2.2.2
+      file-selector: 0.6.0
+      next: 14.0.3(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      tailwind-merge: 1.14.0
+      uploadthing: 6.0.3
+    transitivePeerDependencies:
+      - '@uploadthing/mime-types'
     dev: false
 
   /@uploadthing/shared@6.0.2(@uploadthing/mime-types@0.2.2):
@@ -3438,6 +3462,10 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  /tailwind-merge@1.14.0:
+    resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
+    dev: false
 
   /tailwind-merge@2.0.0:
     resolution: {integrity: sha512-WO8qghn9yhsldLSg80au+3/gY9E4hFxIvQ3qOmlpXnqpDKoMruKfi/56BbbMg6fHTQJ9QD3cc79PoWqlaQE4rw==}
