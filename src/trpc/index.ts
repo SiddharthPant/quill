@@ -3,6 +3,7 @@ import { router, procedure, privateProcedure } from "./trpc";
 import { TRPCError } from "@trpc/server";
 import { db } from "@/db";
 import { z } from "zod";
+import { UTApi } from "uploadthing/server";
 
 export const appRouter = router({
   authCallback: procedure.query(async () => {
@@ -79,6 +80,16 @@ export const appRouter = router({
       });
 
       if (!file) throw new TRPCError({ code: "NOT_FOUND" });
+
+      try {
+        const utapi = new UTApi();
+        await utapi.deleteFiles(file.key);
+      } catch (err) {
+        console.log(
+          `Error occured while deleting the file ${file.key} in upload thing: `
+        );
+        console.dir(err, { depth: null });
+      }
 
       await db.file.delete({
         where: {
